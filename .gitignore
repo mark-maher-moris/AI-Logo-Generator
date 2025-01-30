@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 ._*
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -39,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignore all files and directories starting with an underscore
-_*
+# Ignore all files starting with ._
+._*
