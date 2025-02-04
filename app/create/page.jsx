@@ -20,15 +20,15 @@ console.log(formData)
        
        { 
        step == 1?
-        <LogoTitle onHandleInputChange={(v)=>onHandleInputChange("title" , v)} />
+        <LogoTitle onHandleInputChange={(v)=>onHandleInputChange("title" , v)} formData={formData}/>
         : step == 2 ?
-         <LogoDescription onHandleInputChange={(v)=>onHandleInputChange("description" , v)}/>  
+         <LogoDescription onHandleInputChange={(v) => onHandleInputChange("description", v)}formData={formData} />
          :step == 3 ?    
-          <LogoColorPalette onHandleInputChange={(v)=>onHandleInputChange("palette" , v)}/>  
+          <LogoColorPalette onHandleInputChange={(v)=>onHandleInputChange("palette" , v)}formData={formData}/>  
           : step == 4 ? 
-          <LogoDesigns onHandleInputChange={(v)=>onHandleInputChange("design" , v)}/> 
+          <LogoDesigns onHandleInputChange={(v)=>onHandleInputChange("design" , v)}formData={formData}/> 
           : step == 5 ?
-          <LogoIdea onHandleInputChange={(v)=>onHandleInputChange("idea" , v)}/>
+          <LogoIdea onHandleInputChange={(v)=>onHandleInputChange("idea" , v)}formData={formData}/>
           : null  
          }
        
