@@ -5,7 +5,7 @@ import LogoDesign from "@/app/_data/LogoDesign";
 import Image from "next/image";
 
 export default function LogoDesigns({onHandleInputChange, formData}) {
-  const [selectedOption, setSelectedOption] = useState(formData?.design?.title); // Initialize with null
+  const [selectedOption, setSelectedOption] = useState(formData?.design); // Initialize with null
 
   return (
     <div className="my-10">
@@ -15,7 +15,8 @@ export default function LogoDesigns({onHandleInputChange, formData}) {
           <div
             key={index}
             className={`rounded-lg p-4 cursor-pointer ${selectedOption === design.title ? 'border-2 border-indigo-500' : ''}`}
-            onClick={() => {setSelectedOption(design.title);
+            onClick={() => {
+              setSelectedOption(design.title);
               onHandleInputChange(design);
             }}
           >
